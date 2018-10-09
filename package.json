@@ -1,11 +1,11 @@
 {
-  "name": "YingpodScaffold",
+  "name": "yingpod-scaffold",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "lint": "eslint src --ext .js --fix"
+    "lint": "node check.js"
   },
   "pre-commit": [
     "lint"

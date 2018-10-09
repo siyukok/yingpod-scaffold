@@ -18,6 +18,7 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "no-console":[0],
         "no-undef": [0],
         "react/display-name": [0],
         "indent": [

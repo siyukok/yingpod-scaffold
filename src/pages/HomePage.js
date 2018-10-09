@@ -9,8 +9,7 @@ import {
 	Platform,
 	StyleSheet,
 	Text,
-	View,
-	Image
+	View
 } from 'react-native';
 import PropTypes from 'prop-types';
 
