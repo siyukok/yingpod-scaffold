@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "lint": "git diff-tree --no-commit-id --name-only -r $REVISION | xargs pre-commit run --files."
+    "lint": "eslint src --ext .js --fix"
   },
   "pre-commit": [
     "lint"
