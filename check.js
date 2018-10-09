@@ -1,8 +1,8 @@
 var exec = require('child_process').exec;
 // var eslint = require('eslint');
 var fs = require('fs');
-var errTip = ['发现错误'];
-var successTip = ['没有错误了'];
+var errTip = ['发现错误,暂停提交代码'];
+var successTip = ['没有错误,开始提交代码'];
 var lint = function(cb) {
 	exec('eslint ./ --cache --quiet', function(error, stdout) {// 通过node子进程执行命令，
 		if(stdout) {
@@ -24,7 +24,7 @@ var extraTab = function(cb) {
 	var checkTab = function(text, name) {//检测函数
 		if(/\t\s/.test(text)) {
 			console.log('\x1B[31m%s', name);
-			console.log('\x1B[37m', '存在tab键和空格键乱用哦！');
+			console.log('\x1B[37m', '存在tab键和空格键乱用！');
 			return false;
 		}
 		return true;
